@@ -6,7 +6,6 @@ nav {
   align-items: center;
   gap: 20px;
   background-color: #fff;
-  font-family: Montserrat;
   padding: 30px 60px;
 }
 
@@ -56,7 +55,6 @@ nav svg {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: RobotoSlab;
 }
 
 .book-container {
@@ -79,7 +77,6 @@ nav svg {
 }
 
 .book-title {
-  font-family: RobotoSlab;
   font-size: 1.375rem;
   font-weight: bold;
   font-stretch: normal;
@@ -90,7 +87,6 @@ nav svg {
 }
 
 .book-author {
-  font-family: RobotoSlab;
   font-size: 0.875rem;
   font-weight: 300;
   font-stretch: normal;
@@ -106,7 +102,6 @@ nav svg {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  font-family: RobotoSlab;
   font-size: 0.875rem;
   font-weight: 300;
   font-stretch: normal;
@@ -124,7 +119,6 @@ button {
   background: none;
   border: none;
   padding: 0;
-  font-family: RobotoSlab;
   color: #4386bf;
   font-size: 0.875rem;
   font-weight: 300;
@@ -152,7 +146,6 @@ button {
 }
 
 .form-heading {
-  font-family: Montserrat;
   font-size: 1.25rem;
   font-weight: bold;
   font-stretch: normal;
@@ -177,7 +170,6 @@ form {
   width: 500px;
   padding-left: 20px;
   color: #c4c4c4;
-  font-family: Montserrat;
   font-size: 14px;
 }
 
@@ -187,7 +179,6 @@ form {
   width: 400px;
   padding-left: 20px;
   color: #c4c4c4;
-  font-family: Montserrat;
   font-size: 14px;
 }
 
@@ -197,7 +188,6 @@ form {
   background-color: #0290ff;
   border-radius: 5px;
   width: 200px;
-  font-family: RobotoSlab;
   font-size: 14px;
 }
 
