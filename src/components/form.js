@@ -11,7 +11,7 @@ const Form = () => {
 
   const addNewBook = (event) => {
     event.preventDefault();
-    const book = { id: uuidv4(), ...title, ...author };
+    const book = { item_id: uuidv4(), ...title, ...author };
     dispatch(addBook(book));
     event.target.reset();
   };

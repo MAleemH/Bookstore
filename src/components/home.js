@@ -9,7 +9,8 @@ const Home = () => {
     <div className="home-container">
       {booksList.map((book) => (
         <Books
-          key={book.id}
+          key={book.item_id}
+          id={book.item_id}
           title={book.title}
           author={book.author}
         />
