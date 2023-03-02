@@ -49,7 +49,7 @@ const Form = () => {
           value={author}
           required
         />
-        <select onChange={categoryInput} value={category} required>
+        <select onChange={categoryInput} value={category} className="book-category-input" required>
           <option value="">Select Category</option>
           <option value="Action">Action</option>
           <option value="Drama">Drama</option>
