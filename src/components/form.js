@@ -49,12 +49,13 @@ const Form = () => {
           value={author}
           required
         />
-        <select onChange={categoryInput} value={category} required>
+        <select onChange={categoryInput} value={category} className="book-category-input" required>
           <option value="">Select Category</option>
           <option value="Action">Action</option>
           <option value="Drama">Drama</option>
           <option value="Romance">Romance</option>
-          <option value="Fiction">Fiction</option>
+          <option value="Fiction">Science Fiction</option>
+          <option value="Other">Other</option>
         </select>
         <button type="submit" className="form-button">Add Book</button>
       </form>

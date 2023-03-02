@@ -18,8 +18,6 @@ const Home = () => {
     // eslint-disable-next-line
   }, []);
 
-  console.log(booksList);
-
   return (
     <div className="home-container">
       {booksList.map((book) => (
