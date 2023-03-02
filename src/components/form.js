@@ -1,7 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/booksSlice';
 
 const Form = () => {
@@ -11,22 +10,15 @@ const Form = () => {
 
   const dispatch = useDispatch();
 
-  const titleInput = (e) => {
-    setTitle(e.target.value);
-  };
+  const titleInput = (e) => setTitle(e.target.value);
 
-  const authorInput = (e) => {
-    setAuthor(e.target.value);
-  };
+  const authorInput = (e) => setAuthor(e.target.value);
 
-  const categoryInput = (e) => {
-    setCategory(e.target.value);
-  };
+  const categoryInput = (e) => setCategory(e.target.value);
 
-  const addNewBook = (event) => {
-    event.preventDefault();
+  const addNewBook = (e) => {
+    e.preventDefault();
     const book = {
-      item_id: uuidv4(),
       title,
       author,
       category,
