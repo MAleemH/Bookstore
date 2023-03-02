@@ -5,15 +5,36 @@ import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/booksSlice';
 
 const Form = () => {
-  const [title, setTitle] = useState({});
-  const [author, setAutor] = useState({});
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
+
   const dispatch = useDispatch();
+
+  const titleInput = (e) => {
+    setTitle(e.target.value);
+  };
+
+  const authorInput = (e) => {
+    setAuthor(e.target.value);
+  };
+
+  const categoryInput = (e) => {
+    setCategory(e.target.value);
+  };
 
   const addNewBook = (event) => {
     event.preventDefault();
-    const book = { item_id: uuidv4(), ...title, ...author };
+    const book = {
+      item_id: uuidv4(),
+      title,
+      author,
+      category,
+    };
     dispatch(addBook(book));
-    event.target.reset();
+    setTitle('');
+    setAuthor('');
+    setCategory('');
   };
 
   return (
@@ -24,16 +45,25 @@ const Form = () => {
           type="text"
           className="book-name-input"
           placeholder="Book Title"
-          onChange={(e) => setTitle({ title: e.target.value })}
+          onChange={titleInput}
+          value={title}
           required
         />
         <input
           type="text"
           className="book-author-input"
           placeholder="Author Name"
-          onChange={(e) => setAutor({ author: e.target.value })}
+          onChange={authorInput}
+          value={author}
           required
         />
+        <select onChange={categoryInput} value={category} required>
+          <option value="">Select Category</option>
+          <option value="Action">Action</option>
+          <option value="Drama">Drama</option>
+          <option value="Romance">Romance</option>
+          <option value="Fiction">Fiction</option>
+        </select>
         <button type="submit" className="form-button">Add Book</button>
       </form>
     </div>
